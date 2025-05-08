@@ -1,4 +1,4 @@
-// Problem 1
+
 
 function formatString(input: string, toUpper?: boolean): string {
     if (toUpper || typeof toUpper === "undefined") {
@@ -10,12 +10,11 @@ function formatString(input: string, toUpper?: boolean): string {
     }
 }
 
-console.log(formatString("Hello",))        // Output: "HELLO"
-console.log(formatString("Hello", true))  // Output: "HELLO"
-console.log(formatString("Hello", false))// Output: "hello"
+console.log(formatString("Hello",))        
+console.log(formatString("Hello", true))  
+console.log(formatString("Hello", false))
 
 
-// Problem 2
 
 function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
     const filterData = items.filter((i) => i.rating >= 4)
@@ -30,11 +29,10 @@ const books = [
 ];
 
 const filterRatingData = filterByRating(books);
-console.log(filterRatingData)
-// Output: [ { title: "Book A", rating: 4.5 }, { title: "Book C", rating: 5.0 } ]
 
 
-// Problem 3
+
+
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     let initialArray: T[] = [];
@@ -44,13 +42,13 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     return initialArray
 }
 
-const testArray = concatenateArrays(["a", "b"], ["c"]);       // Output: ["a", "b", "c"]
-const testArraye = concatenateArrays([1, 2], [3, 4], [5]);     // Output: [1, 2, 3, 4, 5]
+const testArray = concatenateArrays(["a", "b"], ["c"]);      
+const testArraye = concatenateArrays([1, 2], [3, 4], [5]);     
 
-console.log(testArray,testArraye, "----------------")
+console.log(testArray,testArraye)
 
 
-// Problem 4
+
 
 class Vehicle {
     private make : string;
@@ -83,13 +81,13 @@ class Car extends  Vehicle{
 
 
 const myCar = new Car("Toyota", 2020, "Corolla");
-myCar.getInfo();   // Output: "Make: Toyota, Year: 2020"
-myCar.getModel();  // Output: "Model: Corolla"
+myCar.getInfo();   
+myCar.getModel();  
 
 console.log("problem 5",myCar.getInfo(), myCar.getModel())
 
 
-// Problem 6 
+
 
 function processValue(value: string | number): number{
     let result :  number = 0
@@ -102,11 +100,9 @@ function processValue(value: string | number): number{
     return result;
 }
 
-processValue("hello"); // Output: 5
-processValue(10);      // Output: 20
+processValue("hello"); 
+processValue(10);      
 
-
-// Problem 7
 
 
 enum Day {
@@ -130,7 +126,7 @@ getDayType(Day.Monday);   // Output: "Weekday"
 getDayType(Day.Sunday);   // Output: "Weekend"
 
 
-// Problem 8
+
 
 
 async function squareAsync(n: number): Promise<number>{
@@ -146,5 +142,5 @@ async function squareAsync(n: number): Promise<number>{
     })
 }
 
-squareAsync(4).then(console.log);        // Output after 1s: 16
-squareAsync(-3).catch(console.error);    // Output: Error: Negative number not allowed
+squareAsync(4).then(console.log);       
+squareAsync(-3).catch(console.error);    
